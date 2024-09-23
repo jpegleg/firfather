@@ -1,5 +1,3 @@
-![cdlogo](https://carefuldata.com/images/cdlogo.png)
-
 # firfather 🌲
 
 The firfather project is a CI/CD system for creating [serotinous cones](https://github.com/jpegleg/serotinous-cone/tree/main).
