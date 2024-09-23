@@ -6,6 +6,10 @@ The firfather project is a CI/CD system for creating [serotinous cones](https://
 
 A firfather server is intended to use Alpine Linux, but could be adapted to another linux distribution.
 
+Firfather can be deployed to an "edge" machine on-prem that orchestrates across the internet, or deployed
+to a cloud service provider, etc etc. Disk space is the most important system resource for firfather,
+but it does not require many resources. A single vCore and 500MB of RAM can work.
+
 Firfather is made of many components but has five software systems that work together within the project:
 
 - 📦 `arrival`, a packaging system for making APK (Alpine Package Keeper) packages for subcomponents of serotinous-cone
@@ -26,6 +30,10 @@ A CLI program that makes `apk`, essentialy a rusted shell wrapper for `alpine-sd
 
 A daemonized and detached kuberenetes and SSH controller that enforces the state, performing deployment and recovery actions
 if cones are unhealthy.
+
+Winter reads the list of cones to check on from the `winter.toml` file loaded at program start. If new cones are added,
+the `winter.toml` needs to be updated and winter restarted. While the `winter.toml` can be made manually, it can
+have new addresses added by Cone.
 
 ## Cone 
 
