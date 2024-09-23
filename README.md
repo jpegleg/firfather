@@ -2,7 +2,7 @@
 
 # firfather 🌲
 
-The firfather project is a CICD system for creating [serotinous cones](https://github.com/jpegleg/serotinous-cone/tree/main).
+The firfather project is a CI/CD system for creating [serotinous cones](https://github.com/jpegleg/serotinous-cone/tree/main).
 
 A firfather server is intended to use Alpine Linux, but could be adapted to another linux distribution.
 
