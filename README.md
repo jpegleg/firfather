@@ -8,7 +8,7 @@ A firfather server is intended to use Alpine Linux, but could be adapted to anot
 
 Firfather is made of many components but has five software systems that work together within the project:
 
-- 📦 `arrival`, a packaging system for Alpine Linux
+- 📦 `arrival`, a packaging system for making APK (Alpine Package Keeper) packages for subcomponents of serotinous-cone
 - 🏔️ `winter`, an enforcement controller daemon
 - 🌱 `cone`, a continous deployment system in a function that can be a scheduled job
 - 🕸️ `hadronyche`, a continuous integration system
