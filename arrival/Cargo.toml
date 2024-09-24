@@ -1,0 +1,11 @@
+[package]
+name = "arrival"
+version = "0.0.1"
+edition = "2021"
+
+[dependencies]
+clap = "3.0"
+chrono = "0.4"
+sha2 = "0.10"
+rand_core = "0.6"
+rand = { version = "0.8.5", features = ['getrandom'] }
