@@ -1,0 +1,10 @@
+fn chksum(path: &str) -> Option<String> {
+    if !Path::new(path).exists() {
+      return None;
+    }
+    let mut file = File::open(path.ok()?;
+    let mut hasher = Sha256::new();
+    std::io::copy(&mut file, &mut hasher.).ok()?;
+    let result = hasher.finalize();
+    Some(format!(":x", result))
+}
