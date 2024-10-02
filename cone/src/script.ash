@@ -11,6 +11,7 @@ mkdir -p /srv/persist/TEMPLATE-cert /srv/persist/TEMPLATE-key
 
 chmod 600 /srv/persist/*key /srv/persist/*cert || echo "error on chmod of directories for TLS cert and key"
 
+mv /root/TEMPLATE.tgz /srv/persist/ &&
 cd /srv/persist/ && 
 cp TEMPLATE.tgz TEMPLATE &&
 cd TEMPLATE && 
