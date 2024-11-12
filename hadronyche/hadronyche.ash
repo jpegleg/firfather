@@ -42,7 +42,8 @@ cargo test | tee -a $WKDR/"$DATO"
 cargo build --release | tee -a $WKDR/"$DATO"
 
 # build OCI containers
-## since we are building on Alpine instead of with an alpine container, move this for the automation
+## since we are building on Alpine instead of with an Alpine container created by 'cross'
+##   copy the binary to the cross path as per the serotinous cone template default
 mkdir -p target/x86_64-unknown-linux-musl/release/
 ## fill static content with test payload
 mkdir -p static/.well-known
@@ -68,7 +69,7 @@ sha3sum *.json | tee "$WKDR"/slim_report_checksums-"$DATO".txt
 
 # ...add below here to expand custom security checks...
 
-##----------------> wrap up
+##----------------> save build artifacts and clean up
 cp "$WKDR"/serotinous-cone/morph_micro_template/*.tar /home/hadronyche/workspace/"$DATO"/
 cp "$WKDR"/serotinous-cone/morph_micro_template/Cargo.toml /home/hadronyche/workspace/"$DATO"/
 
