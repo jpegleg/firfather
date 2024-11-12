@@ -42,9 +42,9 @@ cargo test | tee -a $WKDR/"$DATO"
 cargo build --release | tee -a $WKDR/"$DATO"
 
 # build OCI containers
-## work around usual cross pathcp /tmp/slim-state/.slim-state/images/*/artifacts/*.json .
+## since we are building on Alpine instead of with an alpine container, move this for the automation
 mkdir -p target/x86_64-unknown-linux-musl/release/
-## work around fill static content
+## fill static content with test payload
 mkdir -p static/.well-known
 echo TESTMORPH > static/index.html
 cp target/release/morph-server target/x86_64-unknown-linux-musl/release/
