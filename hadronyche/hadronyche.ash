@@ -60,16 +60,16 @@ sha3sum morph-test.tar | tee -a $WKDR/"$DATO"
 # collection cargo lock files and use as SBOM
 cp "$WKDR"/serotinous-cone/morph_micro_template/Cargo.lock  "$WKDR"/"$DATO"_SBOM_Cargo-lock.txt
 
-# create seccomp json trace
+# create seccomp trace with usable json artifact
 slim build "localhost:5000/morph-test"
 mkdir -p /home/hadronyche/workspace/"$DATO"
 cp /tmp/slim-state/.slim-state/images/*/artifacts/*.json /home/hadronyche/workspace/"$DATO"/
 sha3sum *.json | tee "$WKDR"/slim_report_checksums-"$DATO".txt
 
-# yara-x scan goes here, TODO
+# ...add below here to expand custom security checks...
 
 ##----------------> wrap up
 cp "$WKDR"/serotinous-cone/morph_micro_template/*.tar /home/hadronyche/workspace/"$DATO"/
 cp "$WKDR"/serotinous-cone/morph_micro_template/Cargo.toml /home/hadronyche/workspace/"$DATO"/
-cp "$WKDR"/serotinous-cone/morph_micro_template/slim_report_checksums-"$DATO".txt /home/hadronyche/workspace/"$DATO"/
+
 rm -rf "$WKDR"
