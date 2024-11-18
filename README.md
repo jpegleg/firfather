@@ -45,6 +45,6 @@ Hydronyche is a very specific CI system for serotinous cones that includes HTML 
 
 ## Mygalomorphae 
 
-<b>hydronyche</b> - (biology) <i>an infraorder</i> of many species of <i>trap door</i> spiders
+<b>mygalomorphae</b> - (biology) <i>an infraorder</i> of many species of <i>trap door</i> spiders
 
 Mygalomorphae is built from [morpho-sessions](https://github.com/jpegleg/morpho-sessions) (Actix-based) web API for collecting information on firfather.
