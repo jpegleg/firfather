@@ -30,6 +30,6 @@ fn main() -> std::io::Result<()> {
     //
     // make decisions then if we need to restore a cone from tarball, for example
     //     roots::unpackreact(key_path, username, hostname, tcp_address)
-    // where the values passed are populated either from the winter.toml
+    // where the values passed are populated from the winter.toml
     Ok(())
 }
