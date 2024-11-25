@@ -32,6 +32,7 @@ DATO="$(hostname)$(date +%Y%m%d%H%M%SXX)"
 mkdir -p $WKDR 2>/dev/null
 cd $WKDR || exit 1
 docker image ls || grep alpine.*community /etc/apk/repositories || buildrepo
+docker image ls || service docker restart
 cargo install cross
 
 # build serotinous cone binaries
